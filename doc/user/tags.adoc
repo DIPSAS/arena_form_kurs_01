@@ -1,0 +1,28 @@
+
+== Tags
+
+16 tags available. This documentation is auto-generated from code. 
+
+[options="header"]
+.tags
+|====
+| Tag | Description 
+|disablePhrases|Dekativerer fraser for et tekstfelt
+|ForceMinMultiplicity|
+|HideFieldLabel|Skjuler ledetekst på datetyper som har flere felter. F.eks duration som har egne ledetekster for år, måneder, dager osv.
+
+|HideInReadOnly|Skjuler felt eller kontainer hvis skjema er i lesemodus og det er tomt.
+|HideLabel|Skjuler ledetekst på felt 
+|IncludeInMasterDetail|
+|ShowAsCombobox|
+|ShowAsHyperlink|
+|ShowAsMasterDetail|
+|ShowAsMultiComboBox|
+|ShowAsRadios|
+|ShowAsSelectionList|Shows an element with occurences n…​.m as a multiselect list, this functionality supports DvCodedText and DvOrdinal, also DIPS internal codes is supported, but beware as all entrys will be listed.
+|ShowAsTable|
+|ShowImageAndCombobox|
+|ShowImageAndRadios|
+|SplitDateTime|Splits DV_DATE_TIME field into two fields, one date field and one time field.
+|====
+

@@ -1,0 +1,89 @@
+// Dette er DIPS sin mal for brukerdokumentasjon (asciidoc).
+// Målgruppen for dette dokumentet er sluttbrukere/superbrukere/forvaltere.
+// Dokumenter basert på denne malen vil normalt ha "user_<programpakke (engelsk)>.adoc" som filnavn
+
+:dips-template-url: \\p-fs01\DIPS\KIDS\Maler\Asciidoc
+include::{dips-template-url}\styles\dips-core-styles.adoc[]
+include::{dips-template-url}\styles\dips-style-no.adoc[]
+
+
+:product: HV_Arena_Skjema_Kurs
+:documenttype: Brukerdokumentasjon
+
+
+ifdef::backend-pdf[= {product}: {documenttype}]
+ifdef::backend-html5[= {product} +++<BR>+++{documenttype}]
+DIPS AS
+:revnumber: Versjon 0.0.1>
+:revdate: 2020-11-25
+:revremark:
+
+include::{dips-template-url}\styles\print.adoc[]
+
+ifdef::print[]
+include::{dips-template-url}\content\dips-copyright-notice.adoc[]
+
+[[dips-document-history]]
+[discrete]
+#### Historikk
+[options="header",frame="topbot",cols="15,10,20,55"]
+|===
+|Dato		|Revisjon	|Forfatter	|Beskrivelse
+|2020-11-25 |0.0.1	|bna		|Initial description
+|===
+
+endif::[]
+
+<<<
+
+[[CONTENT]]
+
+// tag for context sensitive hjelp
+// tag::includetext[]
+:product: HV_Arena_Skjema_Kurs
+:Config_Product_Oppsett_konfig-doc:
+
+////
+Se wiki https://wiki/Documentation-guidelines/Veiledning-for-brukerdokumentasjon for nærmere beskrivelse.
+
+For å lage et anker, sett to hakeklammer foran og bak:
+
+[[productnameanchor]]
+
+og legg det over overskriften som du vil linke til, med ett linjeskift mellom, f.eks. slik:
+
+[[arenadocumentsscanningnewdocuments]]
+
+==== Skanne dokumenter
+
+Det er støtte...
+
+////
+
+[[productnameanchor]]
+
+
+HV_Arena_Skjema_Kurs er et konfigurert produkt i Arena
+
+
+
+
+[[productnameanchorwhatisquickguide]]
+
+=== Bruk av Arena Pasienttavle
+
+
+.Hurtiginnføring
+[options="header",frame="topbot",grid="none",cols="25,75"]
+|===
+|Oppgave |Hvordan?
+
+
+|===
+
+
+
+ifdef::backend-html5[]
+<<<
+include::{dips-template-url}\content\dips-copyright-notice.adoc[]
+endif::[]

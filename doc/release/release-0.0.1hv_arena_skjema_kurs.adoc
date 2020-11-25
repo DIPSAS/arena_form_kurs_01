@@ -1,0 +1,329 @@
+:dips-template-url: \\p-fs01\DIPS\KIDS\Maler\Asciidoc
+include::{dips-template-url}\styles\dips-core-styles.adoc[]
+include::{dips-template-url}\styles\dips-style-no.adoc[]
+
+:product: HV_Arena_Skjema_Kurs
+:documenttype: Versjonsdokumentasjon
+
+ifdef::backend-pdf[= {product}: {documenttype}]
+ifdef::backend-html5[= {product} +++<BR>+++{documenttype}]
+DIPS AS
+:revnumber: Versjon 0.0.1
+:revdate: yyyy-mm-dd
+:revremark:
+
+include::{dips-template-url}\styles\print.adoc[]
+
+ifdef::print[]
+include::{dips-template-url}\content\dips-copyright-notice.adoc[]
+endif::[]
+
+[[dips-document-history]]
+[discrete]
+#### Historikk
+[options="header",frame="topbot",cols="15,10,20,55"]
+|===
+|Dato |Revisjon |Forfatter |Beskrivelse
+|2019-11-12 |1.1 |Kristian Alm |Endringer i versjon 1.1.0
+|===
+
+[[dips-approval-history]]
+[discrete]
+#### Godkjenning
+[options="header",frame="topbot",cols="15,10,20,55"]
+|===
+|Dato |Revisjon |Godkjent av |Stilling
+|2019-11-12 |1.1 |Thea Moseid Kristensen |Produkteier
+|===
+
+
+<<<
+
+ifeval::["{revremark}"==""]
+include::{dips-template-url}\content\dips-prerelease-notice-no.adoc[]
+endif::[]
+
+include::{dips-template-url}\content\dips-vdok-about-no.adoc[]
+
+
+// nyheter
+
+//==== Overskrift
+
+
+
+////
+
+==== Tittelen til den første nyheten/endring - SKAL VÆRE KORT!
+
+[IMPORTANT]
+_Dette avsnittet beskriver brytende endringer/forbedringer og/eller viktig ny funksjonalitet/endringer i denne versjonen._
+
+==== Tittelen til den andre nyheten/endring - SKAL VÆRE KORT!
+
+[NOTE]
+_Ved endringer, beskriv funksjonaliteten slik den var før endringen. Beskriv så ny funksjonalitet og hvilke konsekvenser det har. Bruk ikonet dersom kundene bør være oppmerksom på endringen._
+
+
+////
+
+// endringer
+
+==== Endring: Endret radprovider for pasientlista
+
+Pasientutvalget på pasientlista "Pasienttavle" har blitt byttet til "Sengepostliste", dette er gjort for å vise samme pasientutvalg som "Sengepostliste". Kolonner som vises og rekkefølgen på de er uforandret. Denne endringen krever at Arena er på versjon 19.1.0.1 eller høyere.
+
+
+
+==== Endring: Byttet ut kolonnen "Labsvar" med "Labstatus"
+
+Kolonnen "Labsvar" viste når det fantes usignerte labsvar, "Labstatus" vil gi mer informasjon om lab. Se eget kapittel i brukerdokumentasjons "Lab status i pasientlister".
+
+
+==== Endring: Fjernet ikon fra kolonner
+
+Fjernet Pluto-ikon fra varsel på "Barn som pårørende" og hjerte-ikon fra hjerteskole. Det vises nå kun tekst i de kolonnene.
+
+
+
+==== Endring: Delt opp dokument
+
+Dokumentet "Other information" er delt opp i to nye dokumenter, "Hjerteskole" og "Barn som pårørende". Det er i tillegg laget dokumentkonsept som er koblet til kolonnene for oppretting av disse dokumentene. Nå registreres hjerteskole og barn som pårørende i hvert sitt skjema.
+
+d:sak 107364 (Helse Nord RHF)
+
+
+
+==== Endring: Skrivefeil i hinttekst
+
+Rettet en skrivefeil i vaqm "PB Risk". Hintteksten til kolonnen "Antibiotika" er nå rettet til "Viser informasjon om antibiotikabruk".
+
+
+
+==== Endring: Kolonne NRS-2002
+
+Fjernet spørsmålstegn-ikon (varsel) på ikke utførte NRS-2002-screeninger.
+
+
+
+==== Endring: Kolonne NRS neste måling
+
+Fjernet tekst «dager til neste NRS» på blanke felter.
+
+
+
+==== Endring:  Kolonne Neste NEWS-scoring
+
+Fjernet spørsmålstegn-ikon (varsel) på ikke utførte NEWS-screeninger. Fikset feil hvor verdiene 4-7 ga oransje respons (det riktige er 5-6 er oransje, 7 er rød og 4 er gul).
+
+
+
+==== Endring: Kolonne NEWS score
+
+Farger og poengskala er justert for å stemme overens med dokumentasjon i den godkjente arketypen (0 er Grønn, 1-4 er Gul, 5-6 ELLER en individuell score på 3 er Oransje, 7 og høyere er Rød).
+Redesignet visningsformat: kolonnen viser nå «[klokkeslett] – [fargekode]», med varsler som fargede ikon til høyre. Fargene på ikon representerer fargekoden på NEWS-scoring. Det numeriske resultatet av scoringen er tatt bort.
+
+d:sak 107329 (Helse Nord RHF)
+
+
+// feilrettinger
+
+==== Feilretting: Rettet feil med NRS-score
+
+*Beskrivelse av feil*
+
+NRS-score forsvant om man tok bort og la til et svar i hovedscreening.
+
+*Beskrivelse av feilretting*
+
+Flyttet "Total NRS-score" inn i clusteret "Hovedscreening" for å skjule/vise scoringsfelt sammen med "Hovedscreening".
+
+d:sak 107339 (Helse Nord RHF)
+
+
+==== Feilretting: NEWS-skjema viser feil fargekode
+
+*Beskrivelse av feil*
+
+NEWS-skjema viser feil fargekode ved noen resultater. Ved resultat 5 eller 6 viser ikke skjemaet "Oransje NEWS respons". Skjemaet viser "Gul" helt fra 1 til og med 6.
+
+*Beskrivelse av feilretting*
+
+Endring i regelsettet som styrer fargene. Score 7++ viser "Rød", Score 5-6 viser "Oransje", Score 1-4 viser "Gul", Score 0 viser "Grønn".
+
+
+==== Feilretting: Skjema "Decubitusrisiko"
+
+*Beskrivelse av feil*
+
+Når du trykker i kolonnen decubitusrisiko og det finnes en tidligere versjon av skjema, åpnes det et nytt dokument uten gjenbruke fra tidligere versjon.
+
+*Beskrivelse av feilretting*
+
+Hvis kolonnene Decubitus risiko og/eller Decubitus tiltak har verdier (ikke er blanke) skal et klikk i ruta åpne et nytt skjema med gjenbruk fra forrige lagrede versjon. Hvis kolonnene er blanke skal det åpnes et nytt blankt skjema.
+
+
+==== Feilretting: Kolonne NEWS score
+
+*Beskrivelse av feil*
+
+Når pasienten fikk en NEWS score på 4, ble fargen satt til oransje. Den skal vise gul.
+
+*Beskrivelse av feilretting*
+
+Kolonnen NEWS score viser nå gul respons når score blir 4.
+
+
+==== Feilretting: Kolonne NEWS nedtelling
+
+*Beskrivelse av feil*
+
+Det ble vist feil fargekoder i kolonnen. 4-7 ga oransje respons.
+
+*Beskrivelse av feilretting*
+
+4 viser nå gult, 5-6 gir oransje og 7 eller mer gir rødt varsel.
+
+
+////
+
+==== Feilretting: Feil som er rettet - SKAL VÆRE KORT
+*Beskrivelse av feil*
+
+_Beskrivelse av feilen og konsekvenser slik at det er mulig for alle kunder å forstå hva feilen innebærer._
+
+*Beskrivelse av feilretting*
+
+_Beskrivelse av feilrettingen og hvordan det fungerer etter rettingen._
+
+d:sak 67890 (kundenavn)
+
+// === Rapporter
+// Kapitlene om "Nye rapporter" og "Endring/feilretting rapporter" tas med dersom det er relevant.
+
+==== Nye rapporter
+Dette kapitlet tas med dersom det er kommet nye relevante rapporter for produktet.
+
+.Rapport for {programpkg}
+[options="header",frame="topbot",grid="none",cols="15,55"]
+|===
+|Navn |Beskrivelse
+| |
+|===
+
+==== Endring/feilretting rapporter
+Dette kapitlet tas med dersom det er gjort endringer eller feilrettinger på publiserte rapporter for produktet.
+
+.Rapport for {programpkg}
+[options="header",frame="topbot",grid="none",cols="15,55"]
+|===
+| Navn |Beskrivelse
+| |
+|===
+
+ifeval::["{revremark}"=="Foreløpig"]
+==== Kjente feil og mangler
+
+//_Dette delkapitlet beskriver alle kjent feil i denne versjonen. Alle feil som er knyttet til en d:sak skal inneholde en referanse til den aktuelle saken. Dette kapitlet kommer med så lenge revremark står til "Foreløpig"._
+
+[WARNING]
+_Viktig informasjon knyttet til kjente feil_
+
+===== Kjent feil 1
+_Beskrivelse av hvordan feilen oppstår/opptrer, konsekvens(er) og mulig omvei._
+
+===== Kjent feil 2
+_Beskrivelse av hvordan feilen oppstår/opptrer, konsekvens(er) og mulig omvei._
+endif::[]
+
+==== Databaseendringer
+
+===== Nye tabeller
+
+.Nye tabeller i {programpkg}.
+[options="header",frame="topbot",grid="none",cols="15,15,70"]
+|===
+|Skjema |Tabell |Beskrivelse
+
+|skjemanavn
+|tabellnavn
+|beskrivelse
+
+|===
+
+===== Nye tabellfelter
+.Nye tabellfelter i {programpkg}.
+[options="header",frame="topbot",grid="none",cols="15,15,15,55"]
+|===
+|Skjema |Tabell | Tabellfelt |Beskrivelse
+
+|skjemanavn
+|tabellnavn
+|tabellfelt
+|beskrivelse
+
+|===
+
+===== Nye systemparameter
+.Nye systemparameter i {programpkg}.
+[options="header",frame="topbot",grid="none",cols="35,40,15,10"]
+|===
+|Parameternavn |Forklaring |Standardverdi |Skal vises
+
+|parameternavn
+|forklaring
+|standardverdi
+|skal vises
+
+|===
+
+===== Nye kodeverk
+.Nye kodeverk i {programpkg}.
+[options="header",frame="topbot",grid="none",cols="30,10,60"]
+|===
+|Kodelistenavn |Kan endres lokalt |Beskrivelse
+
+|kodelistenavn
+|ja/nei
+|beskrivelse
+
+|===
+
+===== Nye elementtyper
+.Nye elementtyper i {programpkg}.
+[options="header",frame="topbot",grid="none",cols="30,70"]
+|===
+|Elementtypenavn |Beskrivelse
+
+|elementtypenavn
+|beskrivelse
+
+|===
+
+===== Nye dataelementer
+
+.Nye dataelementer i {programpkg}.
+[options="header",frame="topbot",grid="none",cols="20,15,15,20,30"]
+|===
+|Klassenavn |Feltnavn |Feltmakstilgang |Elementtypenavn |Beskrivelse
+
+|klassenavn
+|feltnavn
+|feltmakstilgang
+|elementtypenavn
+|beskrivelse
+
+|===
+
+===== Nye funksjoner
+.Nye funksjoner i {programpkg}.
+[options="header",frame="topbot",grid="none",cols="30,70"]
+|===
+|Funksjon |Elementtype
+
+|funksjon
+|elementtypenavn
+
+|===
+
+////

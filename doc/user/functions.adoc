@@ -1,0 +1,158 @@
+
+== Functions
+
+104 functions available.
+
+=== Logikkfunksjoner
+[options="header"]
+.Logikkfunksjoner
+|====
+| Function | Description 
+|AND(logisk, [logisk2], ...)|Returnerer TRUE hvis alle argumenter er sanne
+|OR (logisk1, logisk2, ...)|Returnerer TRUE hvis ett av argumentene er sann.
+|NOT (logisk_uttrykk)|Reverserer logikken i sin argumentasjon.
+|IF (logisk_test, verdi_hvis_sann, [verdi_hvis_usann])|Angir en logisk test som skal utføres.
+|TRUE()|Returnerer den logiske verdien SANN.
+|FALSE()|Returnerer den logiske verdien FALSE
+|IFNULL(value, value_if_null)|Returns the value you specify if the formula returns the NULL value; otherwise returns the result of the formula.
+|====
+
+=== Matematikk- og trigonometrifunksjoner
+[options="header"]
+.Matematikk- og trigonometrifunksjoner
+|====
+| Function | Description 
+|ABS(tall)|Returnerer absoluttverdien til et tall
+|ACOS(tall)|Returnerer arcus cosinus til et tall
+|ASIN(tall)|Returnerer arcus sinus til et tall
+|ATAN(tall)|Returnerer arcus tangens til et tall
+|ATAN2(tall_x, tall_y)|Returnerer arcus tangens fra x- og y-koordinater
+|CEILING(tall,antall_sifre)|Runder av et tall oppover, bort fra null
+|COS (tall)|Returnerer cosinus til en gitt vinkel.
+|COSH (tall)|Returnerer den hyperbolske cosinus til et tall
+|EXP(tall)|Returnerer e opphøyd i en angitt potens
+|FLOOR(tall, antall_sifre)|Runder et tall ned, mot null.
+|INT (tall)|Runder av et tall nedover til nærmeste heltall.
+|LN(tall)|Returnerer den naturlige logaritmen til et tall
+|LOG(tall,[grunntall])|Returnerer logaritmen for et tall til et angitt grunntall
+|LOG10(tall)|Returnerer logaritmen med grunntall 10 for et tall
+|PI ()|Returnerer tallet 3,14159265358979, den matematiske konstanten pi, nøyaktig 15 sifre.
+|POWER (tall, potens)|Returnerer resultatet av et tall opphøyd i en potens.
+|RAND()|Returnerer et tilfeldig tall mellom 0 og 1
+|RANDBETWEEN (nederst, øverst)|Returnerer et tilfeldig heltall mellom tallene du angir. En ny tilfeldig heltall returneres hver gang funksjonen kjøres.
+|ROUND(tall, [antall])|Runder et tall til et angitt 
+|SIGN(tall)|Finner tegnet til et tall. Returnerer 1 hvis tallet er positivt, 0 hvis tallet er 0, og -1 hvis tallet er negativt.
+|SIN (tall)|Returnerer sinus til en gitt vinkel.
+|SINH (tall)|Returnerer hyperbolsk sinus til et tall.
+|SQRT (antall)|Returnerer en positiv kvadratrot.
+|SUM (tall1, [tall2], ...)|SUMMER-funksjonen legger alle numrene du angir som argumenter.
+|TAN (tall)|Returnerer tangens til en gitt vinkel.
+|TANH (antall)|Returnerer hyperbolsk tangens til et tall.
+|TRUNC (tall, antall)|Avkorter et tall til et heltall ved å fjerne brøkdelen av nummeret.
+|====
+
+=== Tekstfunksjoner
+[options="header"]
+.Tekstfunksjoner
+|====
+| Function | Description 
+|CHAR(tall)|Returnerer tegnet som svarer til kodenummeret
+|CODE (tekst)|Returnerer en numerisk kode for det første tegnet i en tekststreng. Den returnerte koden tilsvarer tegnsettet som brukes av datamaskinen.
+|CONCATENATE (tekst1, [tekst2], ...)|CONCATENATE-funksjon setter sammen opptil 255 tekststrenger i en tekststreng. De sammenkoblede elementene kan være tekst, tall, cellereferanser, eller en kombinasjon av disse elementene. For eksempel, hvis regnearket inneholder en persons fornavn i celle A1 og personens etternavn i celle B1, kan du kombinere de to verdiene i en annen celle ved hjelp av følgende formel: = CONCATENATE (A1, \ "\", B1)
+|FIND(finn,innen_tekst, [startposisjon])|FIND finner en tekststreng inni en annen tekststreng og returnerer nummeret som svarer til startposisjonen for den første tekststrengen, regnet fra det første tegnet i den andre tekststrengen.
+|LEFT (tekst, antall_tegn)|LEFT returnerer det første tegnet eller tegnene i en tekststreng, basert på antall tegn du angir.
+|LEN (tekst)|LEN returnerer antall tegn i en tekststreng.
+|LOWER(tekst)|Konverterer store bokstaver til små.
+|MID(tekst, startposisjon, antall_tegn)|Returnerer et angitt antall tegn fra en tekststreng, og begynner fra posisjonen du angir
+|PROPER(tekst)|Forbokstav i en tekststreng og alle andre bokstaver i teksten som følger noe annet enn et brev karakter. Konverterer alle andre bokstaver til små bokstaver.
+|REPLACE(gammel_tekst, startposisjon, antall_tegn, ny_tekst)|Erstatter deler av en tekst, basert på antall tegn du angir, med en ny tekst.
+|REPT(tekst, antall_ganger)|Gjentar en tekst et gitt antall ganger. 
+|RIGHT(tekst, antall_tegn)|Returnerer siste tegn i en tekst, basert på antall tegn du angir
+|SEARCH(søketekst, tekst, [startposisjon])|Finner en tekstverdi inne i en annen (skiller ikke mellom store og små bokstaver)
+|SUBSTITUTE (tekst, gammel_tekst, ny_tekst, instance_num)|Erstatter gammel_tekst med ny_tekst i en tekststreng. Bruk SUBSTITUTE når du vil erstatte bestemt tekst i en tekststreng; bruke REPLACE når du ønsker å erstatte tekst som oppstår på et bestemt sted i en tekststreng.
+|T (verdi)|Returnerer teksten referert til av verdi.
+|TEXT (verdi, [format_text])|TEXT-funksjonen konverterer en numerisk verdi til tekst og lar deg angi visningsformateringen ved hjelp av spesielle formatstrenger.
+|TRIM (tekst)|Fjerner alle mellomrom fra tekst med unntak av enkelt mellomrom mellom ord. Bruk TRIM på tekst som du har mottatt fra et annet program som kan ha uregelmessig mellomrom.
+|UPPER (tekst)|Konverterer tekst til store bokstaver.
+|VALUE (tekst)|Konverterer en tekststreng som representerer et tall til et tall.
+|CHOOSE(index, value1, [value2], ...)|Uses index to return a value from the list of value arguments. Ex. CHOOSE(2, "a", "b", "c") returns "b"
+|ANY(type, find_text, within_text1, within_text2, ...)|Returns a value indicating whether a specified substring occurs within this string or list of strings. type [startswith, endswith, equals or contains]
+|ALL(type, find_text, within_text1, within_text2, ...)|Returns a value indicating whether a specified substring occurs within this string or list of strings. type [startswith, endswith, equals or contains]
+||Regex
+|====
+
+=== Statistikkfunksjoner
+[options="header"]
+.Statistikkfunksjoner
+|====
+| Function | Description 
+|AVERAGE(tall1, [tall2], ...)|Returnerer gjennomsnittet for argumentene
+|AVERAGEA(value1,value2,...)|Returnerer gjennomsnittet for argumentene, inkludert tall, tekst og logiske verdier
+|COUNT (verdi1, [value2], ...)|Teller hvor mange tall som er i argumentlisten
+|COUNTA (verdi1, [verdi2], ...)|COUNTA-funksjonen teller antall verdier som ikke er tomme i et område.
+|COUNTBLANK (verdi1, [verdi2], ...)|Teller tomme verdier i et angitt område av verdier.
+|COUNTIF (verdi1, [verdi2], ..., "> 2")|COUNTIF-funksjonen teller antall verdier innenfor et område som tilfredsstiller et enkelt kriterium som du angir.
+|MAX(tall1, tall2, ...)|Returnerer maksimumsverdien i en argumentliste
+|MAXA(verdi1, verdi2, ...)|Returnerer maksimumsverdien i en argumentliste, inkludert tall, tekst og logiske verdier
+|MIN(tall1, tall2, ...)|Returnerer minimumsverdien i en argumentliste
+|MINA(verdi1, verdi2, ...)|Returnerer den minste verdien i en argumentliste, inkludert tall, tekst og logiske verdier
+|STDEV (tall1, tall2, ...)|Anslår standardavvik basert på et utvalg. Standardavviket er et mål på hvor vidt verdier er dispergert fra gjennomsnittsverdien (middelverdien).
+|STDEVA (verdi1, verdi2, ...)|Anslår standardavvik basert på et utvalg. Standardavviket er et mål på hvor vidt verdier er dispergert fra gjennomsnittsverdien (middelverdien).
+|STDEVP (tall1, tall2, ...)|Beregner standardavvik basert på hele populasjonen gitt som argumenter. Standardavviket er et mål på hvor vidt verdier er dispergert fra gjennomsnittsverdien (middelverdien).
+|STDEVPA (verdi1, verdi2, ...)|Beregner standardavvik basert på hele populasjonen gitt som argumenter, inkludert tekst og logiske verdier. Standardavviket er et mål på hvor vidt verdier er dispergert fra gjennomsnittsverdien (middelverdien).
+|VAR (tall1, tall2, ...)|Estimater varians basert på et utvalg.
+|VARA (verdi1, verdi2, ...)|Estimater varians basert på et utvalg.
+|VARP (tall1, tall2, ...)|Beregner varians basert på hele populasjonen.
+|VARPA (verdi1, verdi2, ...)|Beregner varians basert på hele populasjonen.
+|====
+
+=== Dato- og tidsfunksjoner
+[options="header"]
+.Dato- og tidsfunksjoner
+|====
+| Function | Description 
+|NOW()|Returnerer datetime som representerer gjeldende dato og klokkeslett.
+|TODAY()|Returnerer datetime som representerer dagens dato.
+|NOWTICKS ()|Returnerer antall ticks som representerer dagens datetime.
+|TODAYTICKS ()|Returnerer antall ticks som representerer dagens dato.
+|DATEVALUE (DATE_TEXT)|DATEVALUE-funksjonen konverterer en ISO 8601-dato eller -datetime fra string til ticks
+|DAYTICKS(dager)|DAYTICKS-funksjonen konverterer dager til ticks
+|HOURTICKS(antall_timer)|Konverterer timer til ticks
+|MINUTETICKS(antall_minutter)|Konverterer minutter til ticks
+|DATETIME (ticks)|Datetime-funksjonen konverterer ticks til datetime.
+|ISO8601DATETIME (ticks)|ISO8601DATETIME-funksjonen konverterer ticks til en ISO8601 datetime- streng.
+|ISO8601DATE (ticks)|ISO8601DATE funksjonen konverterer ticks til en ISO8601 datostreng.
+|ISO8601TIME (ticks)|ISO8601TIME-funksjonen konverterer ticks til en ISO8601 tidstreng.
+|WEEKNUM (ticks)|Returnerer uke i året som omfatter datoen i den angitte datetime verdi representert av ticks.
+|DURATIONTICKS(varighet)|DURATIONTICKS-funksjonen konverterer en iso8601-varighet (string) til ticks 
+|DAYS(sluttdato, startdato)|Returnerer antall dager mellom to datoer
+|HOURS(slutt_dato, start_dato)|Returnerer antall timer mellom to datoer.
+|WEEKS (sluttdato, startdato)|Returnerer antall uker mellom to datoer.
+|MONTH(ticks)|Returnerer måneden av en dato representert som ticks. Måneden blir returnert som et heltall, fra 1 (januar) til 12 (desember).
+|YEAR (ticks)|Returnerer året av en dato representert av ticks. Året blir returnert som et heltall i området 0001-9999.
+|FORMATDATETIME(ticks, iso8601 datostring, [språk])|Gir valgfritt datoformat. Eks: formatdatetime(nowticks(), "D", "nb-no") gir "torsdag 6. oktober 2016". formatdatetime(nowticks(), "D", "en-us") gir "Thursday, October 6, 2016"
+|DURATION_ADD([ISO8601 date eller datetime],[ISO8601 Duration tekst])|Legger til den gitte teksten på Iso8601Duration format til den gitte strengen på Iso8601DateTime eller Iso8601Date format
+|DURATION_SUBTRACT([ISO8601 date eller datetime],[ISO8601 Duration tekst])|Trekker fra den gitte teksten på Iso8601Duration format fra den gitte strengen på Iso8601DateTime eller Iso8601Date format
+|AGE(fødselsdato_ticks, gjendendedato_ticks)|Kalkulerer alder basert på fødselsdato og en gitt dato.
+|ISO8601DURATION(date_text1, date_text2)|Calculates the difference between two dates. The result is returned as an iso 8601 durationstring.
+|====
+
+=== Informasjonsfunksjoner
+[options="header"]
+.Informasjonsfunksjoner
+|====
+| Function | Description 
+|ISBLANK (verdi)|Verdi refererer til en tom verdi.
+|ISNUMBER (verdi)|Verdi refererer til et tall.
+|ISNULL (verdi)|Verdien er NULL.
+|NULL|Null-søkeordet er en bokstavelig som representerer en nullreferanse, en som ikke refererer til noe.
+|====
+
+=== TemplateVariable
+[options="header"]
+.TemplateVariable
+|====
+| Function | Description 
+|TEMPLATEVARIABLE("template_variable_name")|template_variable_name refers to a template variable (e.g Pas.Fornavn).
+|====
+

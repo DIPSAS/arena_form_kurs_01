@@ -1,0 +1,243 @@
+{
+  "FormName": "news_litt_avansert",
+  "FormVersion": "0.0.2",
+  "Title": "news_litt_avansert 0.0.2",
+  "Description": "",
+  "TemplateVariables": [
+    {
+      "Name": "Sys.Now",
+      "Value": "2020-11-25T22:41:59.0000000"
+    }
+  ],
+  "Aliases": [
+    {
+      "FormId": "news_litt_avansert/news/tidspunkt/respirasjonsfrekvens",
+      "Name": "Respirasjonsfrekvens"
+    },
+    {
+      "FormId": "news_litt_avansert/news/tidspunkt/oksygenmetning",
+      "Name": "Oksygenmetning"
+    },
+    {
+      "FormId": "news_litt_avansert/news/tidspunkt/tilførsel_av_oksygen",
+      "Name": "Tilførsel av oksygen"
+    },
+    {
+      "FormId": "news_litt_avansert/news/tidspunkt/kroppstemperatur",
+      "Name": "Kroppstemperatur"
+    },
+    {
+      "FormId": "news_litt_avansert/news/tidspunkt/systolisk_blodtrykk",
+      "Name": "Systolisk blodtrykk"
+    },
+    {
+      "FormId": "news_litt_avansert/news/tidspunkt/hjertefrekvens_puls",
+      "Name": "Hjertefrekvens/puls"
+    },
+    {
+      "FormId": "news_litt_avansert/news/tidspunkt/bevissthetsgrad",
+      "Name": "Bevissthetsgrad"
+    }
+  ],
+  "Tests": [
+    {
+      "Title": "Test #1",
+      "TemplateVariables": [],
+      "Items": [
+        {
+          "Input": {
+            "Title": "Input #1",
+            "Events": [
+              {
+                "Field": {
+                  "FormId": "news_litt_avansert/news/tidspunkt/respirasjonsfrekvens",
+                  "Path": "/content[openEHR-EHR-OBSERVATION.news_uk_rcp.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0006]/value"
+                },
+                "Command": "SetValue",
+                "Value": {
+                  "Type": "DV_ORDINAL",
+                  "Value": {
+                    "_type": "DV_ORDINAL",
+                    "value": 0,
+                    "symbol": {
+                      "value": "12-20",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0018"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "Field": {
+                  "FormId": "news_litt_avansert/news/tidspunkt/oksygenmetning",
+                  "Path": "/content[openEHR-EHR-OBSERVATION.news_uk_rcp.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0029]/value"
+                },
+                "Command": "SetValue",
+                "Value": {
+                  "Type": "DV_ORDINAL",
+                  "Value": {
+                    "_type": "DV_ORDINAL",
+                    "value": 0,
+                    "symbol": {
+                      "value": "≥96",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0030"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "Field": {
+                  "FormId": "news_litt_avansert/news/tidspunkt/tilførsel_av_oksygen",
+                  "Path": "/content[openEHR-EHR-OBSERVATION.news_uk_rcp.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0034]/value"
+                },
+                "Command": "SetValue",
+                "Value": {
+                  "Type": "DV_ORDINAL",
+                  "Value": {
+                    "_type": "DV_ORDINAL",
+                    "value": 0,
+                    "symbol": {
+                      "value": "Nei",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0036"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "Field": {
+                  "FormId": "news_litt_avansert/news/tidspunkt/kroppstemperatur",
+                  "Path": "/content[openEHR-EHR-OBSERVATION.news_uk_rcp.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0007]/value"
+                },
+                "Command": "SetValue",
+                "Value": {
+                  "Type": "DV_ORDINAL",
+                  "Value": {
+                    "_type": "DV_ORDINAL",
+                    "value": 0,
+                    "symbol": {
+                      "value": "36.1-38.0",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0022"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "Field": {
+                  "FormId": "news_litt_avansert/news/tidspunkt/systolisk_blodtrykk",
+                  "Path": "/content[openEHR-EHR-OBSERVATION.news_uk_rcp.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value"
+                },
+                "Command": "SetValue",
+                "Value": {
+                  "Type": "DV_ORDINAL",
+                  "Value": {
+                    "_type": "DV_ORDINAL",
+                    "value": 0,
+                    "symbol": {
+                      "value": "111-219",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0014"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "Field": {
+                  "FormId": "news_litt_avansert/news/tidspunkt/hjertefrekvens_puls",
+                  "Path": "/content[openEHR-EHR-OBSERVATION.news_uk_rcp.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0005]/value"
+                },
+                "Command": "SetValue",
+                "Value": {
+                  "Type": "DV_ORDINAL",
+                  "Value": {
+                    "_type": "DV_ORDINAL",
+                    "value": 0,
+                    "symbol": {
+                      "value": "51-90",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0013"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "Field": {
+                  "FormId": "news_litt_avansert/news/tidspunkt/bevissthetsgrad",
+                  "Path": "/content[openEHR-EHR-OBSERVATION.news_uk_rcp.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0008]/value"
+                },
+                "Command": "SetValue",
+                "Value": {
+                  "Type": "DV_ORDINAL",
+                  "Value": {
+                    "_type": "DV_ORDINAL",
+                    "value": 0,
+                    "symbol": {
+                      "value": "A",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0024"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Verification": {
+            "Title": "Verification #2",
+            "Items": [
+              {
+                "State": {
+                  "ReadOnly": true,
+                  "Hidden": false
+                },
+                "Field": {
+                  "FormId": "news_litt_avansert/news/tidspunkt/totalskår",
+                  "Path": "/content[openEHR-EHR-OBSERVATION.news_uk_rcp.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0028]/value"
+                },
+                "Operator": "Equal",
+                "Value": {
+                  "Type": "DV_COUNT",
+                  "Value": {
+                    "_type": "DV_COUNT",
+                    "magnitude": 0
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

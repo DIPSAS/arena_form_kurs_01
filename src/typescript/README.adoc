@@ -1,0 +1,16 @@
+= Typescript
+
+== What is it?
+This is the folder for your typescript scripts.
+
+== Howto?
+
+. Install DIPS ehrcraft-script generator from http://tfgit/ehrcraft/generator-ehrcraft-script[]
+. Create a directory with the name of the form
+. cd into that folder
+. run `yo ehrcraft-script`
+
+
+== Support?
+Contact Bifrost by Bjørn Næss <bna@dips.no>
+

@@ -1,0 +1,5 @@
+logonVault*
+runBootstrapper.bat 
+build/*
+choco/*
+data/*
