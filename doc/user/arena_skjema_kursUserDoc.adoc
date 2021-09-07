@@ -44,6 +44,11 @@ endif::[]
 Arena Skjema Kurs 01 er første kursdag i bruk av DIPS Form Designer og tilhørende verktøy. 
 
 
+include::annotations.adoc[]
+include::functions.adoc[]
+include::tags.adoc[]
+
+
 
 
 ifdef::backend-html5[]
