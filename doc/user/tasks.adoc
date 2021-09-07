@@ -1,0 +1,8 @@
+= Oppgaver 
+
+== Vilkårsavhengighet 
+
+Skjema `news_litt_avansert`  inneholder funksjonalitet for å sette NEWS komponenten for temperatur. Med utgangspunkt i registreringen for AVPU kan du lage en vilkårsavhengighet som setter NEWS komponenten for AVPU? 
+
+== Kalkulasjon i skjema 
+OPT `glasgow_calculations` inneholder arketypen for Glasgow Coma Scale. Kan du lage et skjema for denne registreringen som beregner total GCS score? 
