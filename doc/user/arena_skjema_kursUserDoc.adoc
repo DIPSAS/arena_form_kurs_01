@@ -7,14 +7,14 @@ include::{dips-template-url}\styles\dips-core-styles.adoc[]
 include::{dips-template-url}\styles\dips-style-no.adoc[]
 
 
-:product: HV_Arena_Skjema_Kurs
+:product: Arena_Skjema_Kurs
 :documenttype: Brukerdokumentasjon
 
 
 ifdef::backend-pdf[= {product}: {documenttype}]
 ifdef::backend-html5[= {product} +++<BR>+++{documenttype}]
 DIPS AS
-:revnumber: Versjon 0.0.1>
+:revnumber: Versjon 0.0.1
 :revdate: 2020-11-25
 :revremark:
 
@@ -38,48 +38,11 @@ endif::[]
 
 [[CONTENT]]
 
-// tag for context sensitive hjelp
-// tag::includetext[]
-:product: HV_Arena_Skjema_Kurs
-:Config_Product_Oppsett_konfig-doc:
-
-////
-Se wiki https://wiki/Documentation-guidelines/Veiledning-for-brukerdokumentasjon for nærmere beskrivelse.
-
-For å lage et anker, sett to hakeklammer foran og bak:
-
-[[productnameanchor]]
-
-og legg det over overskriften som du vil linke til, med ett linjeskift mellom, f.eks. slik:
-
-[[arenadocumentsscanningnewdocuments]]
-
-==== Skanne dokumenter
-
-Det er støtte...
-
-////
-
 [[productnameanchor]]
 
 
-HV_Arena_Skjema_Kurs er et konfigurert produkt i Arena
+Arena Skjema Kurs 01 er første kursdag i bruk av DIPS Form Designer og tilhørende verktøy. 
 
-
-
-
-[[productnameanchorwhatisquickguide]]
-
-=== Bruk av Arena Pasienttavle
-
-
-.Hurtiginnføring
-[options="header",frame="topbot",grid="none",cols="25,75"]
-|===
-|Oppgave |Hvordan?
-
-
-|===
 
 
 

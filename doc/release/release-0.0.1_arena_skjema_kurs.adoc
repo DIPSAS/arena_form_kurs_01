@@ -1,0 +1,72 @@
+:dips-template-url: \\p-fs01\DIPS\KIDS\Maler\Asciidoc
+include::{dips-template-url}\styles\dips-core-styles.adoc[]
+include::{dips-template-url}\styles\dips-style-no.adoc[]
+
+:product: Arena_Skjema_Kurs
+:documenttype: Versjonsdokumentasjon
+
+ifdef::backend-pdf[= {product}: {documenttype}]
+ifdef::backend-html5[= {product} +++<BR>+++{documenttype}]
+DIPS AS
+:revnumber: Versjon 0.0.1
+:revdate: yyyy-mm-dd
+:revremark:
+
+include::{dips-template-url}\styles\print.adoc[]
+
+ifdef::print[]
+include::{dips-template-url}\content\dips-copyright-notice.adoc[]
+endif::[]
+
+[[dips-document-history]]
+[discrete]
+#### Historikk
+[options="header",frame="topbot",cols="15,10,20,55"]
+|===
+|Dato |Revisjon |Forfatter |Beskrivelse
+|07.09.2021|1.1|Bjørn Næss | Endret innhold i releasedok
+|===
+
+[[dips-approval-history]]
+[discrete]
+#### Godkjenning
+[options="header",frame="topbot",cols="15,10,20,55"]
+|===
+|Dato |Revisjon |Godkjent av |Stilling
+|07.09.2021|1.1 |Bjørn Næss | Seksjonsleder
+|===
+
+
+<<<
+
+ifeval::["{revremark}"==""]
+include::{dips-template-url}\content\dips-prerelease-notice-no.adoc[]
+endif::[]
+
+include::{dips-template-url}\content\dips-vdok-about-no.adoc[]
+
+
+// endringer
+
+==== Endring: Endring av XXX 
+
+Her følger en beskrivelse av det som ble endret 
+
+
+
+// feilrettinger
+
+
+
+==== Feilretting: XXX 
+
+*Beskrivelse av feil*
+
+Her følger beskrivelse av feilsituasjonen 
+
+*Beskrivelse av feilretting*
+
+Her følger en beskrivelse av det som ble rettet
+
+
+
