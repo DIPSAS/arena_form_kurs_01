@@ -1,5 +1,24 @@
 = Oppgaver 
 
+== Oppsett 
+
+Følgende verktøykjede må være tilstede for å jobbe med Arena skjema: 
+
+. Skjemaverktøy
+** EHR Craft Studio eller Form Quality Manager
+** Form Designer
+. Modelleringsverktøy
+** Template designer
+** Arketype designer
+
+Sikre at du har installert alle verktøyene og har det fungerende på din PC når kurset starter.
+
+Kurspunkter for oppsett: 
+
+. Gjennomgang av installasjon og konfigurasjon av verktøy for alle kursdeltakere. 
+. Gjennomgang av funksjonalitet i DIPS sine skjemaverktøy 
+. Gjennomgang av eksempel skjema/form som ligger i repo 
+
 == Vilkårsavhengighet 
 
 Skjema `news_litt_avansert`  inneholder funksjonalitet for å sette NEWS komponenten for temperatur. Med utgangspunkt i registreringen for AVPU kan du lage en vilkårsavhengighet som setter NEWS komponenten for AVPU? 
