@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
+  <id>8c0e1106-c076-47c2-a1cc-9161d77c5da6</id>
+  <name>vitals</name>
+  <description>
+    <original_author>
+      <item>
+        <key>date</key>
+        <value>2020-11-26</value>
+      </item>
+    </original_author>
+    <lifecycle_state>unmanaged</lifecycle_state>
+    <details>
+      <purpose />
+      <use />
+      <misuse />
+    </details>
+    <other_details>
+      <item>
+        <key>licence</key>
+        <value />
+      </item>
+      <item>
+        <key>custodian_organisation</key>
+        <value />
+      </item>
+      <item>
+        <key>original_namespace</key>
+        <value />
+      </item>
+      <item>
+        <key>original_publisher</key>
+        <value />
+      </item>
+      <item>
+        <key>custodian_namespace</key>
+        <value />
+      </item>
+      <item>
+        <key>MD5-CAM-1.0.1</key>
+        <value>22ada8d907b2367f5320c84223c07666</value>
+      </item>
+      <item>
+        <key>PARENT:MD5-CAM-1.0.1</key>
+        <value>6562F732112B8B3F94790E178F4243A5</value>
+      </item>
+      <item>
+        <key>original_language</key>
+        <value>ISO_639-1::nb</value>
+      </item>
+    </other_details>
+  </description>
+  <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1" concept_name="Klinisk kontakt" name="vitals">
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.body_temperature.v2" concept_name="Kroppstemperatur" max="1" path="/content">
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at0063]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0029]/items[at0030]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0029]/items[at0041]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0029]/items[at0065]" max="0" />
+      <Rule path="/protocol[at0020]/items[at0021]" max="0" />
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.pulse.v2" concept_name="Puls/Hjertefrekvens" max="1" path="/content">
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at1005]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at1055]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at1030]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at1022]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at1023]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/data[at0001]/items[at1059]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0012]/items[at0013]" max="0" />
+      <Rule path="/data[at0002]/events[at0003]/state[at0012]/items[at1018]" max="0" />
+      <Rule path="/data[at0002]/events[at1036]" max="0" />
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.avpu.v1" concept_name="AVPU" max="1" path="/content">
+      <Rule path="/protocol[at0009]/items[at0010]" max="0" />
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.pulse_oximetry.v1" concept_name="Pulsoksymetri" max="1" path="/content">
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0044]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0045]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0046]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0058]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0036]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0014]/items[at0016]" max="0" />
+      <Rule path="/protocol[at0007]/items[at0009]" max="0" />
+      <Rule path="/protocol[at0007]/items[at0061]" max="0" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.inspired_oxygen.v1" concept_name="Innåndet oksygen" path="/data[at0001]/events[at0002]/state[at0014]/items[at0015]">
+        <Rule path="/items[at0051]" max="0" />
+        <Rule path="/items[at0052]" max="0" />
+        <Rule path="/items[at0053]" max="0" />
+        <Rule path="/items[at0054]" max="0" />
+      </Items>
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.respiration.v2" concept_name="Åndedrett" max="1" path="/content">
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0016]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0024]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0009]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0070]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0022]/items[at0065]" max="0" />
+      <Rule path="/data[at0001]/events[at0002]/state[at0022]/items[at0056]" max="0" />
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.blood_pressure.v2" concept_name="Blodtrykk" max="1" path="/content">
+      <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at1006]" max="0" />
+      <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at1007]" max="0" />
+      <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at1059]" max="0" />
+      <Rule path="/data[at0001]/events[at0006]/data[at0003]/items[at0033]" max="0" />
+      <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at0008]" max="0" />
+      <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1052]" max="0" />
+      <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1043]" max="0" />
+      <Rule path="/data[at0001]/events[at0006]/state[at0007]/items[at1005]" max="0" />
+      <Rule path="/data[at0001]/events[at1042]" max="0" />
+      <Rule path="/protocol[at0011]/items[at0014]">
+        <constraint xsi:type="multipleConstraint">
+          <includedTypes>Coded_text</includedTypes>
+        </constraint>
+      </Rule>
+      <Rule path="/protocol[at0011]/items[at1038]" max="0" />
+      <Rule path="/protocol[at0011]/items[at1054]" max="0" />
+      <Rule path="/protocol[at0011]/items[at1055]" max="0" />
+      <Rule path="/protocol[at0011]/items[at1010]" max="0" />
+    </Content>
+    <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.news_uk_rcp.v1" concept_name="NEWS" max="1" path="/content">
+      <Rule path="/data[at0001]/events[at0002]/state[at0041]/items[at0043]" max="0" />
+    </Content>
+    <Context />
+  </definition>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-COMPOSITION.encounter.v1">
+    <digest id="MD5-CAM-1.0.1">6562F732112B8B3F94790E178F4243A5</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.body_temperature.v2">
+    <digest id="MD5-CAM-1.0.1">5C3C91A8839945D292E098DDC136CE49</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.pulse.v2">
+    <digest id="MD5-CAM-1.0.1">2A395DB69BFC39A2C4FEE4E101800EF0</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.avpu.v1">
+    <digest id="MD5-CAM-1.0.1">33EBE551CAE38E4889EB720E5C12F447</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.pulse_oximetry.v1">
+    <digest id="MD5-CAM-1.0.1">1FC83A6FE8F0873A82C7E7DDFA956766</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.inspired_oxygen.v1">
+    <digest id="MD5-CAM-1.0.1">A6EAA72F8DB505A4D94341F42B066B49</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.respiration.v2">
+    <digest id="MD5-CAM-1.0.1">0748428E47D758582931B1CD07F1E4CD</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.blood_pressure.v2">
+    <digest id="MD5-CAM-1.0.1">5D46FCA9BDA7F8D49E5959E9BEE6EA18</digest>
+  </integrity_checks>
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.news_uk_rcp.v1">
+    <digest id="MD5-CAM-1.0.1">259DFDFA72B9C25AD6DBE42BEA9E9468</digest>
+  </integrity_checks>
+</template>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="openEHR/v1/Template">
+    <id>0baa9bee-47f8-4e9b-a383-068945c2da41</id>
+    <name>helse_risiko_eks_1</name>
+    <description>
+        <original_author>
+            <item>
+                <key>date</key>
+                <value>2020-11-25</value>
+            </item>
+            <item>
+                <key>name</key>
+                <value>Bjørn Næss</value>
+            </item>
+            <item>
+                <key>organisation</key>
+                <value>DIPS AS</value>
+            </item>
+            <item>
+                <key>email</key>
+                <value>bna@dips.no</value>
+            </item>
+        </original_author>
+        <lifecycle_state>in_development</lifecycle_state>
+        <details>
+            <purpose>Brukes i kurs for Arena Skjema </purpose>
+            <keywords>
+                <item>kurs</item>
+            </keywords>
+        </details>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>800fea4f867994b16a4c425ce94ec2c6</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>6562F732112B8B3F94790E178F4243A5</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::nb</value>
+            </item>
+        </other_details>
+    </description>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.encounter.v1"
+        concept_name="Klinisk kontakt" name="Helserisiko - øvelse 1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content archetype_id="openEHR-EHR-EVALUATION.health_risk.v1"
+            path="/content" xsi:type="tem:EVALUATION">
+            <Rule max="0" path="/data[at0001]/items[at0016]/items[at0014]"/>
+            <Rule max="0" path="/data[at0001]/items[at0016]/items[at0029]"/>
+            <Rule max="0" path="/data[at0001]/items[at0016]/items[at0012]"/>
+            <Rule path="/data[at0001]/items[at0003]">
+                <constraint xsi:type="tem:quantityConstraint">
+                    <includedUnits>1</includedUnits>
+                </constraint>
+            </Rule>
+            <Rule max="0" path="/data[at0001]/items[at0023]"/>
+            <Rule max="0" path="/data[at0001]/items[at0004]"/>
+            <Rule max="0" path="/data[at0001]/items[at0015]"/>
+            <Rule max="0" path="/protocol[at0010]/items[at0025]"/>
+        </Content>
+    </definition>
+    <integrity_checks
+        archetype_id="openEHR-EHR-COMPOSITION.encounter.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">6562F732112B8B3F94790E178F4243A5</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-EVALUATION.health_risk.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">BDD5038538AB4C56E0D328FDC317B4FB</digest>
+    </integrity_checks>
+</template>

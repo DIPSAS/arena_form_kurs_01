@@ -2,3 +2,5 @@ logonVault*
 runBootstrapper.bat 
 build/*
 choco/*
+
+data/data.db

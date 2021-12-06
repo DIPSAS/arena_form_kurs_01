@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns="openEHR/v1/Template">
+    <id>39035229-cabf-4ca0-b4cb-c2a1ab76b7fb</id>
+    <name>glasgow_calculations</name>
+    <description>
+        <original_author>
+            <item>
+                <key>date</key>
+                <value>2020-11-25</value>
+            </item>
+            <item>
+                <key>name</key>
+                <value>Bjørn Næss</value>
+            </item>
+            <item>
+                <key>organisation</key>
+                <value>DIPS AS</value>
+            </item>
+            <item>
+                <key>email</key>
+                <value>bna@dips.no</value>
+            </item>
+        </original_author>
+        <lifecycle_state>in_development</lifecycle_state>
+        <details>
+            <purpose>Brukes for kurs i arena skjema</purpose>
+            <keywords>
+                <item>Kurs</item>
+            </keywords>
+        </details>
+        <other_details>
+            <item>
+                <key>licence</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_organisation</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>original_publisher</key>
+                <value/>
+            </item>
+            <item>
+                <key>custodian_namespace</key>
+                <value/>
+            </item>
+            <item>
+                <key>MD5-CAM-1.0.1</key>
+                <value>e831dc37a41b617928c2bc3e6886ff6d</value>
+            </item>
+            <item>
+                <key>PARENT:MD5-CAM-1.0.1</key>
+                <value>6562F732112B8B3F94790E178F4243A5</value>
+            </item>
+            <item>
+                <key>original_language</key>
+                <value>ISO_639-1::nb</value>
+            </item>
+        </other_details>
+    </description>
+    <definition archetype_id="openEHR-EHR-COMPOSITION.encounter.v1"
+        concept_name="Klinisk kontakt" name="glasgow_calculations"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:COMPOSITION">
+        <Content
+            archetype_id="openEHR-EHR-OBSERVATION.glasgow_coma_scale.v1"
+            max="1" path="/content" xsi:type="tem:OBSERVATION">
+            <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0026]">
+                <constraint xsi:type="tem:countConstraint">
+                    <maxMagnitude>15</maxMagnitude>
+                    <minMagnitude>3</minMagnitude>
+                    <includesMaximum>true</includesMaximum>
+                    <includesMinimum>true</includesMinimum>
+                </constraint>
+            </Rule>
+            <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0030]"/>
+            <Rule max="0" path="/data[at0001]/events[at0002]/data[at0003]/items[at0037]"/>
+            <Rule max="0" path="/data[at0001]/events[at0002]/state[at0040]/items[at0041]"/>
+            <Rule max="0" path="/protocol[at0038]/items[at0042]"/>
+        </Content>
+    </definition>
+    <integrity_checks
+        archetype_id="openEHR-EHR-COMPOSITION.encounter.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">6562F732112B8B3F94790E178F4243A5</digest>
+    </integrity_checks>
+    <integrity_checks
+        archetype_id="openEHR-EHR-OBSERVATION.glasgow_coma_scale.v1"
+        xmlns:tem="openEHR/v1/Template"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
+        <digest id="MD5-CAM-1.0.1">5C65ACE91DFA61E185F8A858A1F6C1B1</digest>
+    </integrity_checks>
+</template>
